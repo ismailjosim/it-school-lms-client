@@ -1,9 +1,13 @@
 import { createBrowserRouter } from 'react-router-dom';
-import UserLogin from '../components/Auth/UserLogin';
-import UserSignUP from '../components/Auth/UserSignUP';
-import ErrorPage from '../components/ErrorPage/ErrorPage';
-import Home from '../components/Home/Home';
+import UserLogin from '../components/UserLogin';
+import UserSignUP from '../components/UserSignUP';
+import ErrorPage from '../components/ErrorPage';
+import Home from '../components/Home';
 import Main from '../layouts/Main';
+import Courses from '../components/Courses';
+import Faqs from '../components/Faqs';
+import Blog from '../components/Blog';
+
 
 const routes = createBrowserRouter([
     {
@@ -26,6 +30,18 @@ const routes = createBrowserRouter([
             {
                 path: '/signup',
                 element: <UserSignUP></UserSignUP>
+            },
+            {
+                path: '/courses',
+                element: <Courses />
+            },
+            {
+                path: '/faqs',
+                element: <Faqs />
+            },
+            {
+                path: '/blog',
+                element: <Blog />
             }
         ]
     }
