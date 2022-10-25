@@ -33,6 +33,7 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/courses',
+                loader: () => fetch('http://localhost:5000/courses'),
                 element: <Courses />
             },
             {
