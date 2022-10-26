@@ -3,15 +3,16 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthProvider';
 import { BsGithub } from 'react-icons/bs';
 import { FcGoogle } from "react-icons/fc";
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 
 
 
 const UserLogin = () => {
-    const { user, userSignIn, googleProviderLogin } = useContext(AuthContext);
+    const { user, userSignIn, googleProviderLogin, githubProviderLogin } = useContext(AuthContext);
 
     const googleProvider = new GoogleAuthProvider();
+    const githubProvider = new GithubAuthProvider();
 
 
     const handleUserLogin = event => {
@@ -41,6 +42,18 @@ const UserLogin = () => {
             })
 
     }
+
+    const handleGutHubSignIn = () => {
+        githubProviderLogin(githubProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => {
+                console.log("Error Found", error);
+            })
+    }
+
 
     return (
         <div className='flex justify-center mt-20'>
@@ -80,7 +93,7 @@ const UserLogin = () => {
                         <button onClick={handleGoogleSignIn} className='text-2xl'>
                             <FcGoogle />
                         </button>
-                        <button className='text-2xl'>
+                        <button onClick={handleGutHubSignIn} className='text-2xl'>
                             <BsGithub />
                         </button>
                     </div>
