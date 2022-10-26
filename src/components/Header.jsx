@@ -4,8 +4,12 @@ import logo from '../assets/favicon.png'
 import { AuthContext } from '../contexts/AuthProvider';
 
 const Header = () => {
-    const { user } = useContext(AuthContext);
-    const { email } = user;
+    const { user, userLogOut } = useContext(AuthContext);
+
+
+    const handleUserSignOut = () => {
+        userLogOut().then(() => { }).catch((error => console.log(error)))
+    }
 
     return (
         <div className='mb-5'>
@@ -20,11 +24,15 @@ const Header = () => {
                         <Link to='/faqs' className="mr-5 hover:text-gray-900">FAQs</Link>
                         <Link to='/blog' className="mr-5 hover:text-gray-900">Blog</Link>
                     </nav>
+
                     <div className='flex justify-center items-center p-5 flex-col md:flex-row items-cente'>
                         <img className='bg-gray-600 rounded-full' width={40} src={logo} alt="IT School" />
-                        <span className="ml-1 text-3xl font-semibold uppercase">{email}</span>
+                        <span className="ml-1 text-3xl font-semibold uppercase">{user?.email}</span>
                     </div>
+
+
                     <Link to='/login' className="inline-flex btn text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Log In</Link>
+                    <button onClick={handleUserSignOut} className="inline-flex btn text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">log out</button>
                 </div>
             </header>
         </div>
