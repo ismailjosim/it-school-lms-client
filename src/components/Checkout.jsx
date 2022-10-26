@@ -1,14 +1,14 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 
 const Checkout = () => {
     const course = useLoaderData();
 
     return (
-        <div className='w-1/2 mx-auto'>
+        <div className=' sm:w-2/3 my-5 mx-auto'>
             <h2 className='text-4xl font-semibold underline py-5'>Proceed To Checkout</h2>
-            <div className="flex flex-col p-6 space-y-4 sm:p-10 bg-slate-100 text-gray-800 shadow-lg rounded-md border-2 border-teal-400">
+            <div className="flex flex-col p-6 space-y-4 sm:p-10 bg-slate-100 text-gray-800 shadow-lg rounded-md border-2 border-violet-500">
                 <h2 className="text-xl font-semibold capitalize mb-5">Your cart Courses items</h2>
                 <ul className="flex flex-col divide-y divide-gray-700">
                     <li className="flex flex-col sm:flex-row sm:justify-between border border-slate-600 p-3 rounded-md">
@@ -56,10 +56,10 @@ const Checkout = () => {
                     <p className="text-sm dark:text-gray-400">Not including taxes and shipping costs</p>
                 </div>
                 <div className="flex justify-end space-x-4">
-                    <button type="button" className="px-6 py-2 border rounded-md dark:border-violet-400">Back
-                        <span className="sr-only sm:not-sr-only">to shop</span>
-                    </button>
-                    <button type="button" className="px-6 py-2 border rounded-md dark:bg-violet-400 dark:text-gray-900 dark:border-violet-400">
+                    <Link to='/courses' type="button" className="px-6 py-2 border rounded-md dark:border-violet-400">Back
+                        <span className="sr-only sm:not-sr-only"> to Courses</span>
+                    </Link>
+                    <button type="button" className="px-6 py-2 border rounded-md dark:bg-violet-500 dark:border-violet-500 text-white">
                         <span className="sr-only sm:not-sr-only">Continue to</span>Checkout
                     </button>
                 </div>
