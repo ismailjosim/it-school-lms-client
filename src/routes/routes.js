@@ -8,6 +8,7 @@ import Courses from '../components/Courses';
 import Faqs from '../components/Faqs';
 import Blog from '../components/Blog';
 import CourseDetails from '../components/CourseDetails';
+import Checkout from '../components/Checkout';
 
 
 const routes = createBrowserRouter([
@@ -49,7 +50,13 @@ const routes = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog />
+            },
+            {
+                path: '/course/checkout/:id',
+                loader: ({ params }) => fetch(`https://assignment-project-server-ismailjosim.vercel.app/course/${ params.id }`),
+                element: <Checkout />
             }
+
         ]
     }
 ])

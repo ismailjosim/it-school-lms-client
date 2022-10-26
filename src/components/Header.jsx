@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/favicon.png'
 import { AuthContext } from '../contexts/AuthProvider';
+import '../index.css';
 
 const Header = () => {
     const { user, userLogOut } = useContext(AuthContext);
@@ -27,7 +28,8 @@ const Header = () => {
 
                     {user ?
                         <div className='flex gap-3 justify-center items-center flex-col md:flex-row'>
-                            <img className='bg-gray-600 rounded-full' width={40} src={user?.photoURL} alt="IT School" />
+
+                            <img className="p-1 w-10 h-10 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src={user?.photoURL} alt="Bordered avatar" />
                             <span className="font-medium">{user?.displayName}</span>
                             <button onClick={handleUserSignOut} className="inline-flex btn text-white bg-indigo-500 border-0 ml-2 focus:outline-none hover:bg-indigo-600 rounded text-lg">log out</button>
                         </div>
@@ -36,8 +38,8 @@ const Header = () => {
                             <Link to='/login' className="inline-flex btn text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Log In</Link>
                         </div>
                     }
-
                 </div>
+
             </header>
         </div>
 
@@ -45,4 +47,7 @@ const Header = () => {
 };
 
 export default Header;
+
+
+
 

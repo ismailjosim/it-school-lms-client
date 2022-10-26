@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import CourseCard from './CourseCard';
 
@@ -6,6 +6,7 @@ import CourseCard from './CourseCard';
 
 const Courses = () => {
     const coursesData = useLoaderData();
+
 
 
     return (
