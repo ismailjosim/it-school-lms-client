@@ -9,7 +9,7 @@ import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 
 const UserLogin = () => {
-    const { user, userSignIn, googleProviderLogin, githubProviderLogin } = useContext(AuthContext);
+    const { userSignIn, googleProviderLogin, githubProviderLogin } = useContext(AuthContext);
 
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
@@ -70,7 +70,7 @@ const UserLogin = () => {
                         <div>
                             <div className="flex justify-between mb-2">
                                 <label htmlFor="password" className="text-sm">Password</label>
-                                <a href="#" className="text-xs hover:underline dark:text-gray-400">Forgot password?</a>
+                                <Link href="/" className="text-xs hover:underline dark:text-gray-400">Forgot password?</Link>
                             </div>
                             <input type="password" name="password" id="password" placeholder="Enter Password" className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100" />
                         </div>
