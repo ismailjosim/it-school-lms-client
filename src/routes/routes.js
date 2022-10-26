@@ -9,6 +9,7 @@ import Faqs from '../components/Faqs';
 import Blog from '../components/Blog';
 import CourseDetails from '../components/CourseDetails';
 import Checkout from '../components/Checkout';
+import PrivateRoute from './PrivateRoute';
 
 
 const routes = createBrowserRouter([
@@ -54,7 +55,7 @@ const routes = createBrowserRouter([
             {
                 path: '/course/checkout/:id',
                 loader: ({ params }) => fetch(`https://assignment-project-server-ismailjosim.vercel.app/course/${ params.id }`),
-                element: <Checkout />
+                element: <PrivateRoute><Checkout /></PrivateRoute>
             }
 
         ]

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthProvider';
 import { BsGithub } from 'react-icons/bs';
 import { FcGoogle } from "react-icons/fc";
@@ -10,6 +10,9 @@ import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 const UserLogin = () => {
     const { userSignIn, googleProviderLogin, githubProviderLogin } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
 
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
@@ -25,6 +28,7 @@ const UserLogin = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 console.log("Error Found", error)
@@ -36,6 +40,8 @@ const UserLogin = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                navigate(from, { replace: true })
+
             })
             .catch(error => {
                 console.log("Error Found", error);
@@ -48,6 +54,7 @@ const UserLogin = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 console.log("Error Found", error);
