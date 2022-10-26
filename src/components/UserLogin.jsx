@@ -7,9 +7,12 @@ import { GoogleAuthProvider } from 'firebase/auth';
 
 
 
+
 const UserLogin = () => {
     const { user, userSignIn, googleProviderLogin } = useContext(AuthContext);
+
     const googleProvider = new GoogleAuthProvider();
+
 
     const handleUserLogin = event => {
         event.preventDefault();
@@ -36,6 +39,7 @@ const UserLogin = () => {
             .catch(error => {
                 console.log("Error Found", error);
             })
+
     }
 
     return (
