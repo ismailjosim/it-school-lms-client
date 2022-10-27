@@ -19,6 +19,7 @@ const Header = () => {
                 <div className='sm:mx-0 mx-5'>
                     <div className="relative grid items-center grid-cols-2 lg:grid-cols-3">
                         <ul className="items-center space-x-8 lg:flex font-semibold hidden sm:flex">
+                            <Link to='/' className="mr-5 hover:text-gray-900">Home</Link>
                             <Link to='/courses' className="mr-5 hover:text-gray-900">Courses</Link>
                             <Link to='/faqs' className="mr-5 hover:text-gray-900">FAQs</Link>
                             <Link to='/blog' className="mr-5 hover:text-gray-900">Blog</Link>
