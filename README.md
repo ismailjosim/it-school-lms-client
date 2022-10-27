@@ -26,7 +26,7 @@
 
 ### Some Key Feature of the website
 
-* 3 types of sign in methods added (Email and password, Google Signup, GitHub)
+* 3 types of sign in methods added (Email and password, Google Sign up, GitHub)
 * Load All Data From Server
 * User Only can get premium access when user is logged in.
 * If User is not Logged In then It will Redirect to the login page.
