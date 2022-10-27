@@ -63,3 +63,12 @@ const routes = createBrowserRouter([
 ])
 
 export default routes;
+/*
+loader: () => fetch('https://assignment-project-server-ismailjosim.vercel.app/courses'),
+loader: ({ params }) => fetch(`https://assignment-project-server-ismailjosim.vercel.app/course/${ params.id }`),
+loader: ({ params }) => fetch(`https://assignment-project-server-ismailjosim.vercel.app/course/${ params.id }`),
+
+
+
+
+ */

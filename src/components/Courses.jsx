@@ -16,7 +16,7 @@ const Courses = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
                                 </svg>
 
-                                <span>{course.name}</span>
+                                <span>{course.title}</span>
                             </Link>
                         </div>
                         )
@@ -37,12 +37,4 @@ const Courses = () => {
 };
 
 export default Courses;
-/*
- <div className='grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-5'>
-                <Header handleAddTask={handleAddTask}></Header>
-                <div className='col-span-1 bg-white text-center md:h-full lg:sm:h-2/4 p-4 rounded-lg'>
-                    <Aside taskAdd={taskAdd}></Aside>
-                </div>
-            </div>
 
-*/

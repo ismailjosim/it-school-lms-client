@@ -42,8 +42,8 @@ const UserSignUP = () => {
 
 
     return (
-        <div className='flex justify-center mt-20'>
-            <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-indigo-700 text-white">
+        <div className='flex justify-center my-10'>
+            <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 shadow-md bg-indigo-700 text-white">
                 <div className="mb-8 text-center">
                     <h1 className="my-3 text-4xl font-bold">Sign UP</h1>
                 </div>
@@ -51,11 +51,11 @@ const UserSignUP = () => {
                     <div className="space-y-4">
                         <div>
                             <label htmlFor="name" className="block mb-2 text-sm text-left">Full Name</label>
-                            <input type="text" name="name" placeholder="Your Full Name" className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100" required />
+                            <input type="text" name="name" placeholder="Your Full Name" className="w-full px-3 py-2 border rounded-md dark:text-gray-100" required />
                         </div>
                         <div>
                             <label htmlFor="photoURL" className="block mb-2 text-sm text-left">Photo URL</label>
-                            <input type="text" name="photoURL" placeholder="Your Photo URL" className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100" required />
+                            <input type="text" name="photoURL" placeholder="Your Photo URL" className="w-full px-3 py-2 border rounded-md dark:text-gray-100" required />
                         </div>
                         <div>
                             <label htmlFor="email" className="block mb-2 text-sm text-left">Email address</label>

@@ -63,7 +63,7 @@ const UserLogin = () => {
 
 
     return (
-        <div className='flex justify-center mt-20'>
+        <div className='flex justify-center my-10'>
             <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-indigo-700 text-white">
                 <div className="mb-8 text-center">
                     <h1 className="my-3 text-4xl font-bold">Sign in</h1>
@@ -106,7 +106,7 @@ const UserLogin = () => {
                     </div>
 
                 </div>
-                <p className="px-6 text-sm text-center dark:text-gray-400">Don't have an account yet?
+                <p className="px-6 text-sm text-center text-white">Don't have an account yet?
                     <Link to="/signup" className="hover:underline dark:text-violet-400 ml-1">Sign up</Link>
                 </p>
             </div>
