@@ -14,7 +14,7 @@ const Header = () => {
     }
 
     return (
-        <div className='mb-6 border-b-2 shadow-md shadow-gray-400'>
+        <div className='mb-6 sm:px-5 px-0 border-b-2 shadow-md shadow-gray-400'>
             <div className="py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
                 <div className='sm:mx-0 mx-5'>
                     <div className="relative grid items-center grid-cols-2 lg:grid-cols-3">
@@ -50,7 +50,7 @@ const Header = () => {
 
 
                         }
-                        <label htmlFor="Toggle1" className=" sm:inline-flex hidden items-center space-x-4 cursor-pointer absolute right-32 dark:text-slate-500">
+                        <label htmlFor="Toggle1" className="inline-flex items-center space-x-4 cursor-pointer absolute sm:right-32 right-10 dark:text-slate-500">
                             <span>Light</span>
                             <span className="relative">
                                 <input id="Toggle1" type="checkbox" className="hidden peer" />
@@ -87,12 +87,10 @@ const Header = () => {
                                 <div className="absolute top-0 left-0 w-full z-50">
                                     <div className="p-5 bg-white border rounded shadow-sm">
                                         <div className="flex items-center justify-between mb-4">
-                                            <div>
-                                                <Link to='/' className="inline-flex lg:mx-auto">
-                                                    <img className='bg-gray-600 rounded-full' width={40} src={logo} alt="IT School" />
-                                                    <span className="ml-1 text-3xl font-semibold uppercase">School</span>
-                                                </Link>
-                                            </div>
+                                            <Link to='/'>
+                                                <img width={120} src={logo} alt="IT School" />
+                                            </Link>
+
                                             <div>
                                                 <button
                                                     aria-label="Close Menu"

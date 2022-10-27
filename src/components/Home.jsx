@@ -278,8 +278,7 @@ const Home = () => {
                     <div className="container mx-auto">
                         <div className="flex flex-col lg:flex-row items-center justify-between">
                             <div>
-                                <h2 className="text-center text-5xl tracking-tighter font-bold text-white">Up to
-                                    <br className="sm:hidden" /> 50% Off
+                                <h2 className="text-center text-3xl sm:text-5xl tracking-tighter font-bold text-white">Up to 50% Off
                                 </h2>
                                 <p className='text-xl text-white'>on Your first enrollments</p>
                             </div>
