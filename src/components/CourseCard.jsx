@@ -11,8 +11,8 @@ const CourseCard = ({ course }) => {
                 <img src={thumbnail} alt="Shoes" />
             </figure>
             <div className="card-body">
-                <h2 className="card-title">{title}</h2>
-                <p className='text-left'>{subtitle}</p>
+                <h2 className="card-title text-left">{title}</h2>
+                <p className='text-justify'>{subtitle}</p>
                 <div className="card-actions justify-end">
                     <Link to={`/course/${ course.id }`} className="btn bg-indigo-500 border-0">Read Details</Link>
                 </div>

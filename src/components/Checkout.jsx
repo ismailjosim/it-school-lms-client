@@ -4,6 +4,10 @@ import { Link, useLoaderData } from 'react-router-dom';
 
 const Checkout = () => {
     const course = useLoaderData();
+    const { id, price, thumbnail, title } = course
+
+
+
 
     return (
         <div className=' sm:w-2/3 my-5 mx-auto'>
@@ -13,16 +17,13 @@ const Checkout = () => {
                 <ul className="flex flex-col divide-y divide-gray-700">
                     <li className="flex flex-col sm:flex-row sm:justify-between border border-slate-600 p-3 rounded-md">
                         <div className="flex w-full space-x-2 sm:space-x-4">
-                            <img className="flex-shrink-0 object-cover w-20 h-20 dark:border-transparent rounded outline-none sm:w-32 sm:h-32 dark:bg-gray-500" src={course.picture} alt="Polaroid camera" />
+                            <img className="flex-shrink-0 object-cover w-20 h-20 dark:border-transparent rounded outline-none sm:w-32 sm:h-32 dark:bg-gray-500" src={thumbnail} alt="course_thumbnail" />
                             <div className="flex flex-col justify-between w-full pb-4">
                                 <div className="flex justify-between w-full pb-2 space-x-2">
-                                    <div className="space-y-1">
-                                        <h3 className="text-lg font-semibold leading-snug sm:pr-8">{course.name}</h3>
-                                        <p className="text-sm dark:text-gray-400">Product ID: {course.id}</p>
-                                    </div>
-                                    <div className="text-right">
-                                        <p className="text-lg font-semibold">59.99€</p>
-                                        <p className="text-sm line-through dark:text-gray-600">75.50€</p>
+                                    <div className="text-left flex flex-col gap-3">
+                                        <h3 className=" font-semibold">{title}</h3>
+                                        <p className="text-sm dark:text-gray-400">Product ID: {id}</p>
+                                        <p className="text-lg font-semibold text-violet-700">Price: ${price}</p>
                                     </div>
                                 </div>
                                 <div className="flex text-sm divide-x">
@@ -51,7 +52,7 @@ const Checkout = () => {
                 </ul>
                 <div className="space-y-1 text-right">
                     <p>Total amount:
-                        <span className="font-semibold">357 €</span>
+                        <span className="font-semibold"> ${price}</span>
                     </p>
                     <p className="text-sm dark:text-gray-400">Not including taxes and shipping costs</p>
                 </div>
