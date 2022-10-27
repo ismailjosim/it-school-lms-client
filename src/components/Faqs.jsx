@@ -3,28 +3,64 @@ import React from 'react';
 const Faqs = () => {
     return (
         <div>
-            <section className="dark:bg-gray-800 dark:text-gray-100">
+            <section className="dark:bg-violet-500 my-5 dark:text-gray-100">
                 <div className="container flex flex-col justify-center p-4 mx-auto md:p-8">
                     <p className="p-2 text-sm font-medium tracking-wider text-center uppercase">How it works</p>
                     <h2 className="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl">Frequently Asked Questions</h2>
-                    <div className="flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 divide-gray-700">
+                    <div className="flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 divide-gray-700 text-left">
                         <details open="">
-                            <summary className="py-2 outline-none cursor-pointer focus:underline">Optio maiores eligendi molestiae totam dolores similique?</summary>
+                            <summary className="py-2 outline-none cursor-pointer focus:underline">What do IT School courses include?</summary>
                             <div className="px-4 pb-4">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde neque in fugiat magni, quas animi enim veritatis deleniti ex. Impedit.</p>
+                                <p>
+                                    Each IT School course is created, owned and managed by the instructor's. The foundation of each IT School course are its lectures, which can include videos, slides, and text. In addition, instructors can add resources and various types of practice activities, as a way to enhance the learning experience of students.
+                                </p>
                             </div>
                         </details>
                         <details open="">
-                            <summary className="py-2 outline-none cursor-pointer focus:underline">Modi dolorem veritatis culpa quos consequuntur beatae itaque excepturi perspiciatis?</summary>
+                            <summary className="py-2 outline-none cursor-pointer focus:underline">How do I take a IT School course?</summary>
                             <div className="px-4 pb-4">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est aspernatur quae, eos explicabo odit minima libero veniam similique quibusdam doloribus facilis ipsa accusantium vel maiores corrupti! Libero voluptate a doloribus?</p>
+                                <p>
+                                    IT School courses are entirely on-demand and they can be accessed from several different devices and platforms, including a desktop, laptop, and our mobile app.
+                                    <br />
+                                    After you enroll in a course, you can access it by clicking on the course link you will receive in your confirmation email (provided you're logged into your IT School account). You can also begin the course by logging in and navigating to your My learning page.
+                                </p>
                             </div>
                         </details>
                         <details open="">
-                            <summary className="py-2 outline-none cursor-pointer focus:underline">Magni reprehenderit possimus debitis?</summary>
+                            <summary className="py-2 outline-none cursor-pointer focus:underline">Do I have to start my IT School course at a certain time? And how long do I have to complete it?</summary>
                             <div className="px-4 pb-4 space-y-2">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptates aspernatur dolores in consequatur doloremque inventore reprehenderit, consequuntur perspiciatis architecto.</p>
-                                <p>Sed consectetur quod tenetur! Voluptatibus culpa incidunt veritatis velit quasi cupiditate unde eaque! Iure, voluptatibus autem eaque unde possimus quae.</p>
+                                <p>
+                                    There are no deadlines to begin or complete a course. Learn more about our Lifetime Access policy.
+                                </p>
+                            </div>
+                        </details>
+                        <details open="">
+                            <summary className="py-2 outline-none cursor-pointer focus:underline">Is there any way to preview a course?</summary>
+                            <div className="px-4 pb-4 space-y-2">
+                                <p>
+                                    Yes! You can preview Most of our courses outline roadMap and how instructors will complete the whole course alone.  Learn how to preview a course, and review key information about it. This article outlines how you can search IT School ever-growing library, and find courses you're interested in taking.
+                                </p>
+
+                            </div>
+                        </details>
+                        <details open="">
+                            <summary className="py-2 outline-none cursor-pointer focus:underline">How can I pay for a course?
+                            </summary>
+                            <div className="px-4 pb-4 space-y-2">
+                                <p>
+                                    IT School supports several different payment methods, depending on your account country and location.
+                                </p>
+
+                            </div>
+                        </details>
+                        <details open="">
+                            <summary className="py-2 outline-none cursor-pointer focus:underline">What if I don’t like a course I purchased?
+                            </summary>
+                            <div className="px-4 pb-4 space-y-2">
+                                <p>
+                                    We want you to be satisfied, so all eligible courses purchased on IT School can be refunded within 30 days. If you are unhappy with a course, you can request a refund, provided the request meets the guidelines in our refund policy.
+                                </p>
+
                             </div>
                         </details>
                     </div>
