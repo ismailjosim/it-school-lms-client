@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/favicon.png'
+import logo from '../assets/logo.png'
 import { AuthContext } from '../contexts/AuthProvider';
 import '../index.css';
 
@@ -24,32 +24,42 @@ const Header = () => {
                             <Link to='/blog' className="mr-5 hover:text-gray-900">Blog</Link>
                         </ul>
                         <Link to='/' className="inline-flex items-center lg:mx-auto">
-                            <img className='bg-gray-600 rounded-full' width={40} src={logo} alt="IT School" />
-                            <span className="ml-1 text-3xl font-semibold uppercase">School</span>
+                            <img width={120} src={logo} alt="IT School" />
                         </Link>
-                        <ul className="items-center hidden ml-auto space-x-8 lg:flex">
-                            {user ?
-                                <div className='flex gap-3 justify-center items-center flex-col md:flex-row'>
-
+                        {user ?
+                            <div className="dropdown dropdown-end items-center hidden ml-auto space-x-8 lg:flex">
+                                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                                     <img className="p-1 w-10 h-10 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src={user?.photoURL} alt="Bordered avatar" />
-                                    <span className="font-medium">{user?.displayName}</span>
-                                    <button onClick={handleUserSignOut} className="inline-flex btn text-white bg-indigo-500 border-0 ml-2 focus:outline-none hover:bg-indigo-600 rounded text-lg">log out</button>
-                                </div>
-                                :
-                                <div className='flex justify-center items-center flex-col md:flex-row'>
+                                </label>
+                                <ul tabIndex={0} className="mt-40 gap-5 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                                    <li>
+                                        <span className="font-medium">{user?.displayName}</span>
+                                    </li>
+                                    <li>
+                                        <button onClick={handleUserSignOut} className="inline-flex btn text-white bg-indigo-500 border-0 ml-2 focus:outline-none hover:bg-indigo-600 rounded text-lg">log out</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            :
+                            <ul className='absolute right-0 sm:block hidden'>
+                                <li>
                                     <Link to='/login' className="inline-flex btn text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Log In</Link>
-                                </div>
-                            }
-                            <label htmlFor="Toggle1" className="inline-flex items-center space-x-4 ml-2 cursor-pointer dark:text-slate-500">
-                                <span>Light</span>
-                                <span className="relative">
-                                    <input id="Toggle1" type="checkbox" className="hidden peer" />
-                                    <div className="w-10 h-6 rounded-full shadow-inner dark:bg-gray-400 peer-checked:dark:bg-violet-400"></div>
-                                    <div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto dark:bg-gray-800"></div>
-                                </span>
-                                <span>Dark</span>
-                            </label>
-                        </ul>
+                                </li>
+
+                            </ul>
+
+
+                        }
+                        <label htmlFor="Toggle1" className=" sm:inline-flex hidden items-center space-x-4 cursor-pointer absolute right-32 dark:text-slate-500">
+                            <span>Light</span>
+                            <span className="relative">
+                                <input id="Toggle1" type="checkbox" className="hidden peer" />
+                                <div className="w-10 h-6 rounded-full shadow-inner dark:bg-gray-400 peer-checked:dark:bg-violet-400"></div>
+                                <div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto dark:bg-gray-800"></div>
+                            </span>
+                            <span>Dark</span>
+                        </label>
+
 
                         <div className="ml-auto lg:hidden md:hidden">
                             <button
@@ -156,6 +166,7 @@ const Header = () => {
 };
 
 export default Header;
+
 
 
 
